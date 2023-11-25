@@ -1,1 +1,1 @@
-# IMSS
+# Integrated Multimodal Segmentation Synthesizer (IMSS)
