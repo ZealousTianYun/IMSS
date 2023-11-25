@@ -24,6 +24,7 @@ In summary, the main contributions of this study can be summarized as follows:
 - Innovatively proposes the Multi-Scale Recursive Attention Segmentation Engine for large-scale visual pre-training models (LVM), which not only supplements LVM's shortcomings in detail processing in specific fields but also takes advantage of its original semantic understanding and recognition of spatial and temporal connections to improve model performance.
 - Exploiting a new image segmentation paradigm, Lexical operated spatial isolation. By combining prior knowledge in language models, we further improved the performance of tasks in these downstream domain-specific applications and achieved SOTA results on both hard and complex data sets.
 
+![llustration of our proposed IMSS. This framework features the Grounding DINO and Augmented Visionary Attention Modulated Deep Resolver (AVAMDR) components. Grounding DINO uses text prompts to refine global image perception and detail capture through bounding boxes, while AVAMDR employs the Optimized Refined Perception Synergist (ORPS) for precise image segmentation, focusing on small targets and pixel-level detail.](./images/{66E2FD24-6548-4bb8-BB0A-A5F5558FEE49}.png)
 ## Experimental Results
 
 Our proposed IMSS is compared with multiple state-of-the-art methods on the CelebA-HQ Mask dataset and the OD2P dataset. As shown in Table~\ref{tab:alldata} and Table~\ref{tab:celeb}, the IMSS system that uses language priors to strongly supervise the visual model achieves SOTA results in both data sets compared to previous SOTA models and is significantly ahead of the second-best model.
@@ -33,8 +34,9 @@ Our proposed IMSS is compared with multiple state-of-the-art methods on the Cele
 In Table~\ref{tab:celeb}, the eye segmentation on the CeleA mask HQ dataset broke through the 80% IoU mark for the first time, which was 4.9% higher than the suboptimal model and reached IoU of 83.13% on the right eye and 82.17% on the left eye. This significant improvement is attributed to the adoption of language priors, which compensate for the lack of pixel-level understanding of visual models in complex scenes while avoiding the need for large-scale retraining.
 
 ### OD2P Dataset
-
+![{Comparison of the segmentation results of IMSS and other SOTA methods on the OD2P data set. The red dotted box highlights the differences between SOTAs in difficult segmentation areas. The column of MISS is most similar to the GT effect with semantic priors in various unconventional scenarios. For privacy protection and to highlight the segmentation effect, only the eye area is shown.](./images/{86DC36FF-B713-4b29-8885-79206B46923D}.png)
 On the OD2P dataset, as shown in Table~\ref{tab:alldata}, compared with the suboptimal model, the Dice index and IoU index are 1.6% and 3.0% higher, demonstrating the effectiveness of our approach in improving model performance.
+![{Quantitative comparison of IMSS segmentation results with other SOTA methods on the OD2P data set. It achieved the best results in the F1\textunderscore score, mcc, and IoU indicators that measure segmentation quality, and significantly surpassed other SOTA methods. The bold fonts indicate the best results.](./images/{24B9C75B-B481-41d1-BBB3-734B643A8EF5}.png)
 
 ### Visual Results
 
